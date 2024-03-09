@@ -13,6 +13,8 @@ import { JuegoComponent } from './juego/juego.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomeComponent } from './home/home.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { SerpienteComponent } from './serpiente/serpiente.component';
+import { SerpienteEngineComponent } from './serpiente-engine/serpiente-engine.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MenuComponent,
     JuegoComponent,
     HomeComponent,
+    SerpienteComponent,
+    SerpienteEngineComponent,
   ],
   imports: [
     BrowserModule,
