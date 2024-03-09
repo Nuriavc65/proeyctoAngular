@@ -1,0 +1,71 @@
+img{
+    width: 50px;
+    height: 50px;
+}
+
+button{
+    border: 2px solid black;
+    margin: 2px;
+    width: 60px;
+    height: 60px;
+}
+button:hover{
+    filter: drop-shadow(0 0 4px brown);
+
+}
+h1{
+    font-size: medium;
+    font: bold;
+}
+.bt_maquina{
+    pointer-events: none;
+}
+.bt_jugador{
+    cursor: pointer;
+}
+.msgId{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.contenedor{
+    background-color: #BCEDF6;
+    width: 70vd;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 5px;
+    border: solid black 2px;
+}
+.manos{
+    display: flex;
+   justify-content: space-around;
+   width: 100vh;
+}
+
+.contenedor_main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffE39C;
+    height: 80%;
+}
+.vida{
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+}
+.reset{ 
+    background-color: #ED6B86;
+    height: 50%;
+    width: 50%;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+}
+.contenedor_Reinicio{
+    background-color: #ffE39C;
+    border: black 2px solid;
+}

@@ -1,0 +1,31 @@
+.menu{
+    height: 100vh;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    border:2px solid red;
+}
+.con{
+    width: 100px;
+    margin-bottom: 50vb;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    border: 2px solid orange; 
+}
+.caja{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border:2px solid blue
+}
+.desplegable{
+    display: flex;
+    margin-top: 50vh;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    border: 2px solid blueviolet;
+}

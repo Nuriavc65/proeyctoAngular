@@ -1,0 +1,14 @@
+.contenedor_inicio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("/assets/img/center.jpeg");
+    background-size: cover;
+    height: 250px;
+    background-repeat: no-repeat;
+}
+.info{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}

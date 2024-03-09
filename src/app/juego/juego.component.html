@@ -1,0 +1,53 @@
+<div class="contenedor_main">
+    <div *ngIf="vidaMaquina>0 && vidaJugador>0; else gameReset" class="contenedor">
+        <div class="maquina_vida">
+            <img *ngIf="vidaMaquina>=5" class="vida" src="assets/img/vidaMaquina.png"/>
+            <img *ngIf="vidaMaquina>=4" class="vida" src="assets/img/vidaMaquina.png"/>
+            <img *ngIf="vidaMaquina>=3" class="vida" src="assets/img/vidaMaquina.png"/>
+            <img *ngIf="vidaMaquina>=2" class="vida" src="assets/img/vidaMaquina.png"/>
+            <img *ngIf="vidaMaquina>=1" class="vida" src="assets/img/vidaMaquina.png"/>
+        </div>
+        <div class="manos">
+           <button class="bt_maquina">
+                <img src="assets/img/rock.png">
+           </button> 
+           <button class="bt_maquina">
+                <img src="assets/img/papel.png">
+            </button>
+            <button class="bt_maquina">
+                <img src="assets/img/tijeras.png">
+           </button> 
+        </div>
+        <div class="msgId">
+            <p>{{mensaje}}</p>
+        </div>
+        <div class="manos">
+            <button (click)="this.jugar(1)" class="bt_jugador">
+                <img src="assets/img/rock.png">
+            </button>
+            <button (click)="this.jugar(2)" class="bt_jugador">
+                <img src="assets/img/papel.png">
+            </button>
+            <button (click)="this.jugar(3)" class="bt_jugador">
+                <img src="assets/img/tijeras.png">
+            </button>
+        </div>
+        <div class="vida_jugador">
+            <img *ngIf="vidaJugador>=5" class="vida" src="assets/img/vidaJugador.png"/>
+            <img *ngIf="vidaJugador>=4" class="vida" src="assets/img/vidaJugador.png"/> 
+            <img *ngIf="vidaJugador>=3" class="vida" src="assets/img/vidaJugador.png"/> 
+            <img *ngIf="vidaJugador>=2" class="vida" src="assets/img/vidaJugador.png"/> 
+            <img *ngIf="vidaJugador>=1" class="vida" src="assets/img/vidaJugador.png"/>  
+        </div>
+    </div>
+</div>
+
+<ng-template #gameReset>
+
+    <div class="contenedor_Reinicio">
+        <h1 *ngIf="vidaJugador==0"> MAQUINA GANA </h1>
+        <h1 *ngIf="vidaMaquina==0"> JUGADOR GANA </h1>
+        <button (click)="this.reset()" class="reset">Reiniciar</button>
+    </div>
+
+</ng-template>
