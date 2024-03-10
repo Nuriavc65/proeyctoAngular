@@ -1,0 +1,11 @@
+.mi-lista {
+    list-style-type: none; 
+    padding: 0; 
+}
+.mi-lista li {
+    background-color: #fbe4cb; 
+    padding: 10px; 
+    margin-bottom: 5px; 
+    border-radius: 5px; 
+    border: 1px solid #e28ea9; 
+}

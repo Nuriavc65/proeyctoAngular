@@ -18,6 +18,8 @@ import { SerpienteEngineComponent } from './serpiente-engine/serpiente-engine.co
 import { JuegosMenuComponent } from './juegos-menu/juegos-menu.component';
 import {MatCardModule} from '@angular/material/card';
 import { InfoComponent } from './info/info.component';
+import { MemoriaComponent } from './memoria/memoria.component';
+import { VersionComponent } from './version/version.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { InfoComponent } from './info/info.component';
     SerpienteEngineComponent,
     JuegosMenuComponent,
     InfoComponent,
+    MemoriaComponent,
+    VersionComponent,
 
   ],
   imports: [
