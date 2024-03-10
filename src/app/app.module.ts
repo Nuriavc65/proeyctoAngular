@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { SerpienteComponent } from './serpiente/serpiente.component';
 import { SerpienteEngineComponent } from './serpiente-engine/serpiente-engine.component';
+import { JuegosMenuComponent } from './juegos-menu/juegos-menu.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,9 @@ import { SerpienteEngineComponent } from './serpiente-engine/serpiente-engine.co
     HomeComponent,
     SerpienteComponent,
     SerpienteEngineComponent,
+    JuegosMenuComponent,
+    MatCardModule,
+    
   ],
   imports: [
     BrowserModule,

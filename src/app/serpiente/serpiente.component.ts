@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { Snake } from '../game-engine/snake';
+import { Snake } from '../game-engine/Snake';
 import { Food } from '../game-engine/food';
 import { outsideGrid } from '../game-engine/gameboard-grid.util';
 
