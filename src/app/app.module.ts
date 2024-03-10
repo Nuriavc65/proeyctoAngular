@@ -17,6 +17,7 @@ import { SerpienteComponent } from './serpiente/serpiente.component';
 import { SerpienteEngineComponent } from './serpiente-engine/serpiente-engine.component';
 import { JuegosMenuComponent } from './juegos-menu/juegos-menu.component';
 import {MatCardModule} from '@angular/material/card';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +28,8 @@ import {MatCardModule} from '@angular/material/card';
     SerpienteComponent,
     SerpienteEngineComponent,
     JuegosMenuComponent,
-    MatCardModule,
-    
+    InfoComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -39,6 +40,7 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatToolbarModule,
     MatTabsModule,
+    MatCardModule,
     
   ],
   providers: [],

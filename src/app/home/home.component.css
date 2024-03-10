@@ -5,17 +5,28 @@
 .contenedorimg{
     display: 1;
     text-align: center;
+    margin-right: 50px;
+    margin-left: 20px;
+    margin-top: 30px;
 }
 .image img {
     max-width: 100%;
     height: auto;
+    
+}
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: #e7b2c1;
 }
 .text {
-    flex: 1; /* El texto ocupa todo el espacio disponible */
-    padding: 0 20px; /* Espacio alrededor del texto */
+    flex: 1; 
+    padding: 0 20px;
+    text-justify:auto;
 }
 
 .text p {
     font-size: 18px;
     line-height: 1.5;
+    font-family: 'Times New Roman', Times, serif;  
 }

@@ -1,0 +1,29 @@
+.contenedor{
+    display: flex;
+    
+}
+.caja{
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #e7b2c1 ;
+    margin-left: 10px;
+    margin-top: 100 px;
+}
+.caja img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.contenido{
+    margin: 10px ;
+    
+}
+.contenido p{
+    align-items: center;
+    text-align: center;
+    text-justify:auto;
+    font-size: large;
+    color: #92a17a;
+    margin-top: 50px;
+}

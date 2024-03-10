@@ -1,0 +1,18 @@
+.contenedor{
+    display: flex; 
+}
+.columna{
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.columna p {
+    text-align: center;
+}
+.columna img {
+    max-width: 100%;
+    height: auto;
+}
