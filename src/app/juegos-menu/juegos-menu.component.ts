@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./juegos-menu.component.css']
 })
 export class JuegosMenuComponent {
-
+  
 }

@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { JuegosMenuComponent } from './juegos-menu/juegos-menu.component';
 import { SerpienteComponent } from './serpiente/serpiente.component';
 import { InfoComponent } from './info/info.component';
+import { VersionComponent } from './version/version.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'info',
     component:InfoComponent,
+  },
+  {
+    path: 'version',
+    component:VersionComponent
   },
 
 ];
