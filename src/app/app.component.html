@@ -8,7 +8,7 @@
           </div>
           <div class="hidden w-full sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
             <ng-container *ngFor="let n of nav">
-              <a routerLink="/{{n.href}}" routerLinkActive="active" class="{{viewSelect == n.name ? 'border-slate-500 text-red-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium' : 'border-transparent text-gray-500 hover:text-gray-700 dark:hover:text-white hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}}">{{n.name}}</a>
+              <a routerLink="/{{n.href}}" routerLinkActive="active" (click)="setViewSelect(n.name)" class="{{viewSelect == n.name ? 'border-slate-500 text-red-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium' : 'border-transparent text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'}}">{{n.name}}</a>
             </ng-container>
             <div class="w-full flex justify-end">
             </div>
@@ -26,7 +26,7 @@
     <div class="{{verMenuMovil == true ? 'sm:hidden' : 'hidden'}}" id="" data-headlessui-state="open">
       <div class="space-y-1 pt-2 pb-3">
         <ng-container *ngFor="let n of nav">
-          <a routerLink="/{{n.href}}"  (click)="setVerMenuMovil(verMenuMovil == true ? false : true)" routerLinkActive="active" class="{{viewSelect == n.name ? 'bg-slate-50 dark:bg-[#121212]  border-slate-500 text-slate-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-medium'}}">{{n.name}}</a>
+          <a routerLink="/{{n.href}}"  (click)="setVerMenuMovil(verMenuMovil == true ? false : true)" routerLinkActive="active" class="{{viewSelect == n.name ? 'bg-slate-50 border-slate-500 text-slate-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium' : 'border-transparent text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800 block pl-3 pr-4 py-2 border-l-4 text-base font-medium'}}">{{n.name}}</a>
         </ng-container>
       </div>
     </div> 

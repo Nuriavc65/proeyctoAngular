@@ -29,7 +29,7 @@ h1{
     align-items: center;
 }
 .contenedor{
-    background-color: #BCEDF6;
+    background-color: #c7b3cc;
     width: 70vd;
     height: 100vh;
     display: flex;
@@ -49,7 +49,7 @@ h1{
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #ffE39C;
+    background-color: #f19584;
     height: 80%;
 }
 .vida{

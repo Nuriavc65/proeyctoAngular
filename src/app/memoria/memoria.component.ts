@@ -21,7 +21,7 @@ export class MemoriaComponent {
   }
 
   initializeCards() {
-    const values = ['./../assets/img/sakura.png', './../assets/img/flower.png', './../assets/img/flowers.png', './../assets/img/floral-design.png', './../assets/img/pink-cosmos.png', './../assets/img/flower(1).png'];
+    const values = ['./../assets/img/sakura.png', './../assets/img/flower.png', './../assets/img/flowers.png', './../assets/img/floral-design.png', './../assets/img/pink-cosmos.png', './../assets/img/flower1.png'];
     values.forEach(value => {
       this.cards.push({ value: value, revealed: false });
       this.cards.push({ value: value, revealed: false });

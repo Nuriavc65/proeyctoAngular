@@ -15,7 +15,6 @@ export class AppComponent {
     { name: "Inicio", href: "inicio"},
     { name: "Juegos", href: "juegos"},
     { name: "Información", href: "informacion"},
-    { name: "Desarrollador", href: "desarrollador"},
     { name: "Versión", href: "version"},
   ];
 

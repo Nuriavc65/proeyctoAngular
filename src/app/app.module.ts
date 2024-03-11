@@ -13,13 +13,13 @@ import { JuegoComponent } from './juego/juego.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { HomeComponent } from './home/home.component';
 import {MatTabsModule} from '@angular/material/tabs';
-import { SerpienteComponent } from './serpiente/serpiente.component';
-import { SerpienteEngineComponent } from './serpiente-engine/serpiente-engine.component';
+
 import { JuegosMenuComponent } from './juegos-menu/juegos-menu.component';
 import {MatCardModule} from '@angular/material/card';
 import { InfoComponent } from './info/info.component';
 import { MemoriaComponent } from './memoria/memoria.component';
 import { VersionComponent } from './version/version.component';
+import { AhorcadoComponent } from './ahorcado/ahorcado.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +27,11 @@ import { VersionComponent } from './version/version.component';
     MenuComponent,
     JuegoComponent,
     HomeComponent,
-    SerpienteComponent,
-    SerpienteEngineComponent,
     JuegosMenuComponent,
     InfoComponent,
     MemoriaComponent,
     VersionComponent,
+    AhorcadoComponent,
 
   ],
   imports: [

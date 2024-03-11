@@ -1,6 +1,6 @@
 <div class="contenedor_main">
     <div *ngIf="vidaMaquina>0 && vidaJugador>0; else gameReset" class="contenedor">
-        <div class="maquina_vida">
+        <div class="maquina_vida flex">
             <img *ngIf="vidaMaquina>=5" class="vida" src="assets/img/vidaMaquina.png"/>
             <img *ngIf="vidaMaquina>=4" class="vida" src="assets/img/vidaMaquina.png"/>
             <img *ngIf="vidaMaquina>=3" class="vida" src="assets/img/vidaMaquina.png"/>
@@ -32,7 +32,7 @@
                 <img src="assets/img/tijeras.png">
             </button>
         </div>
-        <div class="vida_jugador">
+        <div class="vida_jugador flex">
             <img *ngIf="vidaJugador>=5" class="vida" src="assets/img/vidaJugador.png"/>
             <img *ngIf="vidaJugador>=4" class="vida" src="assets/img/vidaJugador.png"/> 
             <img *ngIf="vidaJugador>=3" class="vida" src="assets/img/vidaJugador.png"/> 
