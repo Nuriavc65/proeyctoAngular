@@ -1,0 +1,23 @@
+.contenedor{
+    display: flex;
+    align-items: center;
+}
+img{
+    width: 220px;
+    height: 220px;
+}
+ul{
+    flex: 1; 
+    padding: 0 20px;
+    text-justify:auto;
+}
+li{
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: 'Times New Roman', Times, serif; 
+}
+.punto{
+    font-size: 25px;
+    color: #8a49a4;
+    font-style: italic;
+}

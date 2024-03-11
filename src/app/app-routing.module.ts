@@ -25,12 +25,12 @@ const routes: Routes = [
     component: SerpienteComponent,
   },
   {
-    path: 'info',
-    component:InfoComponent,
+    path: 'version',
+    component:VersionComponent,
   },
   {
-    path: 'version',
-    component:VersionComponent
+    path: 'info',
+    component: InfoComponent,
   },
 
 ];

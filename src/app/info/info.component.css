@@ -16,3 +16,13 @@
     max-width: 100%;
     height: auto;
 }
+ul{
+    flex: 1; 
+    padding: 0 20px;
+    text-justify:auto;
+}
+li{
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif; 
+}
