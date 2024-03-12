@@ -1,11 +1,16 @@
-<div class="contenedor">
-    <div class="imgs">
-        <p>img</p>
-    </div>
-    <div class="contenedor_frase">
-        <h1></h1>
-        <h1></h1>
-        <h1></h1>
-        <h1></h1>
-    </div>
+<div>
+    <div class="main">
+        <app-celdas *ngFor="let val of squares; let i = index" [value]="val">
+        </app-celdas>
+    </div> 
 </div>
+
+    <div class="player">
+        <h1 *ngIf="winner=='X'">YOU WIN</h1>
+        <h1 *ngIf="winner=='O'">YOU LOSE</h1>
+        <h1 *ngIf="winner=='drow'">DROW</h1>
+        <button mat-raised-button color="primary" (click)="newGame()">New game</button>
+    </div>
+
+
+   

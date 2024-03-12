@@ -20,6 +20,7 @@ import { InfoComponent } from './info/info.component';
 import { MemoriaComponent } from './memoria/memoria.component';
 import { VersionComponent } from './version/version.component';
 import { AhorcadoComponent } from './ahorcado/ahorcado.component';
+import { CeldasComponent } from './celdas/celdas.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { AhorcadoComponent } from './ahorcado/ahorcado.component';
     MemoriaComponent,
     VersionComponent,
     AhorcadoComponent,
+    CeldasComponent,
 
   ],
   imports: [
