@@ -1,16 +1,30 @@
-<div>
-    <div class="main">
-        <app-celdas *ngFor="let val of squares; let i = index" [value]="val">
-        </app-celdas>
-    </div> 
-</div>
-
-    <div class="player">
-        <h1 *ngIf="winner=='X'">YOU WIN</h1>
-        <h1 *ngIf="winner=='O'">YOU LOSE</h1>
-        <h1 *ngIf="winner=='drow'">DROW</h1>
-        <button mat-raised-button color="primary" (click)="newGame()">New game</button>
+<div class="contenedor">
+    <div class="turno">{{mensajeTurno}}</div>
+    <div class="tablero">
+        <table>
+            <tr>
+                <td (click)="seleccionar(0)" [style.color]="obtenerColorCelda(0)">{{ obtenerContenidoCelda(0)}}</td>
+                <td (click)="seleccionar(1)" [style.color]="obtenerColorCelda(1)">{{ obtenerContenidoCelda(1)}}</td>
+                <td (click)="seleccionar(2)" [style.color]="obtenerColorCelda(2)">{{ obtenerContenidoCelda(2)}}</td>
+            </tr>
+            <tr>
+                <td (click)="seleccionar(3)" [style.color]="obtenerColorCelda(3)">{{ obtenerContenidoCelda(3)}}</td>
+                <td (click)="seleccionar(4)" [style.color]="obtenerColorCelda(4)">{{ obtenerContenidoCelda(4)}}</td>
+                <td (click)="seleccionar(5)" [style.color]="obtenerColorCelda(5)">{{ obtenerContenidoCelda(5)}}</td>
+            </tr>
+            <tr>
+                <td (click)="seleccionar(6)" [style.color]="obtenerColorCelda(6)">{{ obtenerContenidoCelda(6) }}</td>
+                <td (click)="seleccionar(7)" [style.color]="obtenerColorCelda(7)">{{ obtenerContenidoCelda(7) }}</td>
+                <td (click)="seleccionar(8)" [style.color]="obtenerColorCelda(8)">{{ obtenerContenidoCelda(8) }}</td>
+            </tr>
+        </table>
     </div>
+    <button class="nuevoJuego" (click)="reStart()">Nuevo Juego</button>
+</div>
+<div class="partidaGanador" *ngIf="MensajeGanador">
+    <h2>Jugador {{ganador}} ha ganado!!</h2>
+    <button (click)="reStart()">Nuevo juego</button>
+</div>
 
 
    

@@ -1,78 +1,92 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-ahorcado',
   templateUrl: './ahorcado.component.html',
   styleUrls: ['./ahorcado.component.css']
 })
-export class AhorcadoComponent implements OnInit{
-  squares: string[] = [];
-  xIsNext: boolean = true;
-  winner: string = 'X';
-  machine: number = 0;
-  full: boolean = false;
-  name: string ="";
-
-  constructor(){
-  }
+export class AhorcadoComponent {
   
-  ngOnInit(): void {
-    this.newGame();
+  jugadorActual = 1;
+  mapa: number[] = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+  mensajeTurno: string = 'Turno del Jugador 1';
+  ganador: number = 0;
+  MensajeGanador: boolean = false;
+
+  seleccionar(celda: number) {
+    if (!this.ganador && this.mapa[celda] === 0) {
+      this.mapa[celda] = this.jugadorActual;
+      this.jugadorActual = this.jugadorActual === 1 ? 2 : 1;
+      this.actualizarMensajeTurno();
+      this.verificarTresEnRaya();
+    }
   }
-  newGame() {
-    this.squares = Array(9).fill(null);
-    this.winner = this.calculateWinner();
-    this.machine = Math.floor(Math.random() * this.squares.length);
-    this.xIsNext = true;
+  obtenerContenidoCelda(celda: number) {
+    if (this.mapa[celda] === 0) {
+      return '';
+    } else if (this.mapa[celda] === 1) {
+      return 'X';
+    } else if (this.mapa[celda] === 2) {
+      return 'O';
+    } else {
+      return '';
+    }
   }
-  get player() {
-    return this.xIsNext ? 'X' : 'O';
+
+  actualizarMensajeTurno() {
+    this.mensajeTurno = this.jugadorActual === 1 ? 'Turno del Jugador 1' : 'Turno del Jugador 2';
   }
-  makeMove(idx: number) {
-    if (!this.squares[idx]) {
-      this.squares.splice(idx, 1, this.player);
-      this.xIsNext = !this.xIsNext;
-      if (this.calculateWinner() == 'none') {
-        this.machine = Math.floor(Math.random() * this.squares.length);
-        while (this.squares[this.machine]) {
-          this.machine = Math.floor(Math.random() * this.squares.length);
-        }
-        this.squares.splice(this.machine, 1, this.player);
-        this.xIsNext = !this.xIsNext;
+
+  verificarTresEnRaya(){
+    for (let i = 0; i < 9; i += 3) {
+      if (this.mapa[i] !== 0 && this.mapa[i] === this.mapa[i + 1] && this.mapa[i] === this.mapa[i + 2]) {
+        this.ganador = this.mapa[i];
+        this.MensajeGanador = true;
+        return;
       }
     }
 
-    this.winner = this.calculateWinner();
+    
+    for (let i = 0; i < 3; i++) {
+      if (this.mapa[i] !== 0 && this.mapa[i] === this.mapa[i + 3] && this.mapa[i] === this.mapa[i + 6]) {
+        this.ganador = this.mapa[i];
+        this.MensajeGanador = true;
+        return;
+      }
+    }
 
+    
+    if (this.mapa[0] !== 0 && this.mapa[0] === this.mapa[4] && this.mapa[0] === this.mapa[8]) {
+      this.ganador = this.mapa[0];
+      this.MensajeGanador = true;
+      return;
+    }
+    if (this.mapa[2] !== 0 && this.mapa[2] === this.mapa[4] && this.mapa[2] === this.mapa[6]) {
+      this.ganador = this.mapa[2];
+      this.MensajeGanador = true;
+      return;
+    }
+
+    
+    this.ganador = 0;
   }
-  calculateWinner() {
-    const lines = [
-      [0, 1, 2],
-      [3, 4, 5],
-      [6, 7, 8],
-      [0, 3, 6],
-      [1, 4, 7],
-      [2, 5, 8],
-      [0, 4, 8],
-      [2, 4, 6]
-    ];
-    for (let i = 0; i < lines.length; i++) {
-      const [a, b, c] = lines[i];
-      if (
-        this.squares[a] &&
-        this.squares[a] === this.squares[b] &&
-        this.squares[a] === this.squares[c]
-      ) {
-        return this.squares[a];
-      }
+  obtenerColorCelda(celda: number) {
+    if (this.mapa[celda] === 1) {
+      return '#fbe4cb'; 
+    } else if (this.mapa[celda] === 2) {
+      return '#b4b294'; 
+    } else {
+      return 'black'; 
     }
-    this.full = true;
-    for (let i = 0; i < this.squares.length; i++) {
-      if (this.squares[i] == null) {
-        this.full = false;
-      }
+  }
+  reStart() {
+    for (let i = 0; i < 9; i++) {
+      this.mapa[i] = 0;
     }
-    return this.full ? 'drow' : 'none';
+    this.jugadorActual = 1;
+    this.mensajeTurno = 'Turno del Jugador 1';
+    this.ganador = 0;
+    this.MensajeGanador = false;
   }
 
 
